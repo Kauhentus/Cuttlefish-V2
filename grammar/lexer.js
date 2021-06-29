@@ -10,18 +10,34 @@ module.exports = moo.compile({
     rparen:  ')',
     lbracket:  '{',
     rbracket:  '}',
+    lsbracket:  '[',
+    rsbracket:  ']',
+
+    op_eq: ['==', '!=', '<', '>', '<=', '>='],
+    op_bool: ['&&', '||'],
+    op_neg: '!',
 
     func_arrow: '=>',
     comma: ',',
+    dot: '.',
 
+    assign_eq: ['+=', '-=', '*=', '/='],
     equals: '=',
     var_init: ['let', 'const'],
 
-    op_as: ['+', '-'],
+    op_a: '+',
+    op_s: '-',
     op_mdm: ['*', '/', '%'],
     op_exp: '^',
 
-    keyword: ['while', 'if', 'else', 'moo', 'cows'],
+    return_stop: 'return',
+    if_stop: 'if',
+    else_stop: 'else',
+    elif_stop: 'elif',
+
+    for_stop: 'for',
+    while_stop: 'while',
+
     variable: /[_a-zA-Z][_a-zA-Z0-9]*/,
-    nl:      { match: /\n/, lineBreaks: true },
+    nl:      { match: /(?:\r\n?|\n)+/, lineBreaks: true },
 });

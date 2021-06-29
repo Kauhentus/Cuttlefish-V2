@@ -1,1 +1,27 @@
-let d=(a)=>{c;};
+const swap = (arr, i, j) => {
+    let temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+};
+
+const partition = (arr, low, high) => {
+    let pivot = arr[high];
+    let i = low - 1;
+
+    for(let j = low; j <= high - 1; j += 1){
+        if(array[j] < pivot){
+            i += 1;
+            swap(arr, i, j);
+        };
+    };
+
+    swap(arr, i + 1, high);
+
+    return i + 1;
+};
+
+const quicksort = (arr, low, high) => {
+    const pi = partition(arr, low, high);
+    quickSort(arr, low, pi - 1);
+    quickSort(arr, pi + 1, high);
+};

@@ -22,3 +22,5 @@ console.log(parser.results.length);
 const output = new viewer.Viewer('program', parser.results[0])
 output.render();
 console.log(parser.results.length);
+
+fs.writeFileSync('./ast.txt', output.output())

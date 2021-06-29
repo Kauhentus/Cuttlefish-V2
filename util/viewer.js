@@ -32,6 +32,31 @@ var Viewer = /** @class */ (function () {
         };
         stack(this.object, 0);
     };
+    Viewer.prototype.output = function () {
+        let str = '';
+
+        const log = (s) => str += s + '\n';
+
+        log(this.name);
+        var stack = function (object, depth, pipeStack) {
+            if (pipeStack === void 0) { pipeStack = []; }
+            var values = Object.keys(object);
+            for (var i = 0; i < values.length; i++) {
+                var currentValue = object[values[i]];
+                var last = i == values.length - 1;
+                var isNode = Array.isArray(currentValue) || typeof (currentValue) == 'object';
+                var isLeafFunction = !!(currentValue && currentValue.constructor && currentValue.call && currentValue.apply);
+                log(pipeStack.join('') +
+                    (last ? '└─' : '├─') +
+                    values[i] + ': ' + (isNode ? '' : (isLeafFunction ? "[Function: " + currentValue.name + "]" : currentValue)));
+                if (isNode)
+                    stack(currentValue, depth + 1, __spreadArrays(pipeStack, [last ? '    ' : '|   ']));
+            }
+        };
+        stack(this.object, 0);
+
+        return str;
+    };
     return Viewer;
 }());
 exports.Viewer = Viewer;

@@ -1,0 +1,385 @@
+program
+├─label: program
+└─statements: 
+    ├─0: 
+    |   ├─label: action
+    |   ├─type: variable_creation
+    |   ├─name: swap
+    |   ├─value: 
+    |   |   ├─label: function
+    |   |   ├─params: 
+    |   |   |   ├─label: function-params
+    |   |   |   └─args: 
+    |   |   |       ├─0: arr
+    |   |   |       ├─1: i
+    |   |   |       └─2: j
+    |   |   └─body: 
+    |   |       ├─label: scope
+    |   |       └─statements: 
+    |   |           ├─0: 
+    |   |           |   ├─label: action
+    |   |           |   ├─type: variable_creation
+    |   |           |   ├─name: temp
+    |   |           |   ├─value: 
+    |   |           |   |   ├─label: expression
+    |   |           |   |   ├─type: array_access
+    |   |           |   |   ├─array: 
+    |   |           |   |   |   ├─label: atom
+    |   |           |   |   |   ├─type: variable
+    |   |           |   |   |   └─value: arr
+    |   |           |   |   └─index: 
+    |   |           |   |       ├─label: atom
+    |   |           |   |       ├─type: variable
+    |   |           |   |       └─value: i
+    |   |           |   └─kind: let
+    |   |           ├─1: 
+    |   |           |   ├─label: action
+    |   |           |   ├─type: variable_assignment
+    |   |           |   ├─name: 
+    |   |           |   |   ├─label: expression
+    |   |           |   |   ├─type: array_access
+    |   |           |   |   ├─array: 
+    |   |           |   |   |   ├─label: atom
+    |   |           |   |   |   ├─type: variable
+    |   |           |   |   |   └─value: arr
+    |   |           |   |   └─index: 
+    |   |           |   |       ├─label: atom
+    |   |           |   |       ├─type: variable
+    |   |           |   |       └─value: i
+    |   |           |   ├─value: 
+    |   |           |   |   ├─label: expression
+    |   |           |   |   ├─type: array_access
+    |   |           |   |   ├─array: 
+    |   |           |   |   |   ├─label: atom
+    |   |           |   |   |   ├─type: variable
+    |   |           |   |   |   └─value: arr
+    |   |           |   |   └─index: 
+    |   |           |   |       ├─label: atom
+    |   |           |   |       ├─type: variable
+    |   |           |   |       └─value: j
+    |   |           |   └─kind: =
+    |   |           └─2: 
+    |   |               ├─label: action
+    |   |               ├─type: variable_assignment
+    |   |               ├─name: 
+    |   |               |   ├─label: expression
+    |   |               |   ├─type: array_access
+    |   |               |   ├─array: 
+    |   |               |   |   ├─label: atom
+    |   |               |   |   ├─type: variable
+    |   |               |   |   └─value: arr
+    |   |               |   └─index: 
+    |   |               |       ├─label: atom
+    |   |               |       ├─type: variable
+    |   |               |       └─value: j
+    |   |               ├─value: 
+    |   |               |   ├─label: atom
+    |   |               |   ├─type: variable
+    |   |               |   └─value: temp
+    |   |               └─kind: =
+    |   └─kind: const
+    ├─1: 
+    |   ├─label: action
+    |   ├─type: variable_creation
+    |   ├─name: partition
+    |   ├─value: 
+    |   |   ├─label: function
+    |   |   ├─params: 
+    |   |   |   ├─label: function-params
+    |   |   |   └─args: 
+    |   |   |       ├─0: arr
+    |   |   |       ├─1: low
+    |   |   |       └─2: high
+    |   |   └─body: 
+    |   |       ├─label: scope
+    |   |       └─statements: 
+    |   |           ├─0: 
+    |   |           |   ├─label: action
+    |   |           |   ├─type: variable_creation
+    |   |           |   ├─name: pivot
+    |   |           |   ├─value: 
+    |   |           |   |   ├─label: expression
+    |   |           |   |   ├─type: array_access
+    |   |           |   |   ├─array: 
+    |   |           |   |   |   ├─label: atom
+    |   |           |   |   |   ├─type: variable
+    |   |           |   |   |   └─value: arr
+    |   |           |   |   └─index: 
+    |   |           |   |       ├─label: atom
+    |   |           |   |       ├─type: variable
+    |   |           |   |       └─value: high
+    |   |           |   └─kind: let
+    |   |           ├─1: 
+    |   |           |   ├─label: action
+    |   |           |   ├─type: variable_creation
+    |   |           |   ├─name: i
+    |   |           |   ├─value: 
+    |   |           |   |   ├─label: expression
+    |   |           |   |   ├─type: binary
+    |   |           |   |   ├─LHS: 
+    |   |           |   |   |   ├─label: atom
+    |   |           |   |   |   ├─type: variable
+    |   |           |   |   |   └─value: low
+    |   |           |   |   ├─RHS: 
+    |   |           |   |   |   ├─label: atom
+    |   |           |   |   |   ├─type: number
+    |   |           |   |   |   └─value: 1
+    |   |           |   |   └─op: -
+    |   |           |   └─kind: let
+    |   |           ├─2: 
+    |   |           |   ├─label: action
+    |   |           |   ├─type: for_loop
+    |   |           |   ├─variable: 
+    |   |           |   |   ├─label: action
+    |   |           |   |   ├─type: variable_creation
+    |   |           |   |   ├─name: j
+    |   |           |   |   ├─value: 
+    |   |           |   |   |   ├─label: atom
+    |   |           |   |   |   ├─type: variable
+    |   |           |   |   |   └─value: low
+    |   |           |   |   └─kind: let
+    |   |           |   ├─cond: 
+    |   |           |   |   ├─label: expression
+    |   |           |   |   ├─type: binary
+    |   |           |   |   ├─LHS: 
+    |   |           |   |   |   ├─label: atom
+    |   |           |   |   |   ├─type: variable
+    |   |           |   |   |   └─value: j
+    |   |           |   |   ├─RHS: 
+    |   |           |   |   |   ├─label: expression
+    |   |           |   |   |   ├─type: binary
+    |   |           |   |   |   ├─LHS: 
+    |   |           |   |   |   |   ├─label: atom
+    |   |           |   |   |   |   ├─type: variable
+    |   |           |   |   |   |   └─value: high
+    |   |           |   |   |   ├─RHS: 
+    |   |           |   |   |   |   ├─label: atom
+    |   |           |   |   |   |   ├─type: number
+    |   |           |   |   |   |   └─value: 1
+    |   |           |   |   |   └─op: -
+    |   |           |   |   └─op: <=
+    |   |           |   ├─every: 
+    |   |           |   |   ├─label: action
+    |   |           |   |   ├─type: variable_assignment
+    |   |           |   |   ├─name: 
+    |   |           |   |   |   ├─label: atom
+    |   |           |   |   |   ├─type: variable
+    |   |           |   |   |   └─value: j
+    |   |           |   |   ├─value: 
+    |   |           |   |   |   ├─label: atom
+    |   |           |   |   |   ├─type: number
+    |   |           |   |   |   └─value: 1
+    |   |           |   |   └─kind: +=
+    |   |           |   └─scope: 
+    |   |           |       ├─label: scope
+    |   |           |       └─statements: 
+    |   |           |           └─0: 
+    |   |           |               ├─label: action
+    |   |           |               ├─type: conditional
+    |   |           |               ├─condition: 
+    |   |           |               |   ├─label: expression
+    |   |           |               |   ├─type: binary
+    |   |           |               |   ├─LHS: 
+    |   |           |               |   |   ├─label: expression
+    |   |           |               |   |   ├─type: array_access
+    |   |           |               |   |   ├─array: 
+    |   |           |               |   |   |   ├─label: atom
+    |   |           |               |   |   |   ├─type: variable
+    |   |           |               |   |   |   └─value: array
+    |   |           |               |   |   └─index: 
+    |   |           |               |   |       ├─label: atom
+    |   |           |               |   |       ├─type: variable
+    |   |           |               |   |       └─value: j
+    |   |           |               |   ├─RHS: 
+    |   |           |               |   |   ├─label: atom
+    |   |           |               |   |   ├─type: variable
+    |   |           |               |   |   └─value: pivot
+    |   |           |               |   └─op: <
+    |   |           |               ├─pass_scope: 
+    |   |           |               |   ├─label: scope
+    |   |           |               |   └─statements: 
+    |   |           |               |       ├─0: 
+    |   |           |               |       |   ├─label: action
+    |   |           |               |       |   ├─type: variable_assignment
+    |   |           |               |       |   ├─name: 
+    |   |           |               |       |   |   ├─label: atom
+    |   |           |               |       |   |   ├─type: variable
+    |   |           |               |       |   |   └─value: i
+    |   |           |               |       |   ├─value: 
+    |   |           |               |       |   |   ├─label: atom
+    |   |           |               |       |   |   ├─type: number
+    |   |           |               |       |   |   └─value: 1
+    |   |           |               |       |   └─kind: +=
+    |   |           |               |       └─1: 
+    |   |           |               |           ├─label: statement
+    |   |           |               |           └─content: 
+    |   |           |               |               ├─label: expression
+    |   |           |               |               ├─type: func_call
+    |   |           |               |               ├─func: 
+    |   |           |               |               |   ├─label: atom
+    |   |           |               |               |   ├─type: variable
+    |   |           |               |               |   └─value: swap
+    |   |           |               |               └─args: 
+    |   |           |               |                   ├─0: 
+    |   |           |               |                   |   ├─label: atom
+    |   |           |               |                   |   ├─type: variable
+    |   |           |               |                   |   └─value: arr
+    |   |           |               |                   ├─1: 
+    |   |           |               |                   |   ├─label: atom
+    |   |           |               |                   |   ├─type: variable
+    |   |           |               |                   |   └─value: i
+    |   |           |               |                   └─2: 
+    |   |           |               |                       ├─label: atom
+    |   |           |               |                       ├─type: variable
+    |   |           |               |                       └─value: j
+    |   |           |               ├─fail_scope: 
+    |   |           |               |   ├─label: scope
+    |   |           |               |   └─statements: 
+    |   |           |               └─chain: 
+    |   |           ├─3: 
+    |   |           |   ├─label: statement
+    |   |           |   └─content: 
+    |   |           |       ├─label: expression
+    |   |           |       ├─type: func_call
+    |   |           |       ├─func: 
+    |   |           |       |   ├─label: atom
+    |   |           |       |   ├─type: variable
+    |   |           |       |   └─value: swap
+    |   |           |       └─args: 
+    |   |           |           ├─0: 
+    |   |           |           |   ├─label: atom
+    |   |           |           |   ├─type: variable
+    |   |           |           |   └─value: arr
+    |   |           |           ├─1: 
+    |   |           |           |   ├─label: expression
+    |   |           |           |   ├─type: binary
+    |   |           |           |   ├─LHS: 
+    |   |           |           |   |   ├─label: atom
+    |   |           |           |   |   ├─type: variable
+    |   |           |           |   |   └─value: i
+    |   |           |           |   ├─RHS: 
+    |   |           |           |   |   ├─label: atom
+    |   |           |           |   |   ├─type: number
+    |   |           |           |   |   └─value: 1
+    |   |           |           |   └─op: +
+    |   |           |           └─2: 
+    |   |           |               ├─label: atom
+    |   |           |               ├─type: variable
+    |   |           |               └─value: high
+    |   |           └─4: 
+    |   |               ├─label: action
+    |   |               ├─type: func_return
+    |   |               └─value: 
+    |   |                   ├─label: expression
+    |   |                   ├─type: binary
+    |   |                   ├─LHS: 
+    |   |                   |   ├─label: atom
+    |   |                   |   ├─type: variable
+    |   |                   |   └─value: i
+    |   |                   ├─RHS: 
+    |   |                   |   ├─label: atom
+    |   |                   |   ├─type: number
+    |   |                   |   └─value: 1
+    |   |                   └─op: +
+    |   └─kind: const
+    └─2: 
+        ├─label: action
+        ├─type: variable_creation
+        ├─name: quicksort
+        ├─value: 
+        |   ├─label: function
+        |   ├─params: 
+        |   |   ├─label: function-params
+        |   |   └─args: 
+        |   |       ├─0: arr
+        |   |       ├─1: low
+        |   |       └─2: high
+        |   └─body: 
+        |       ├─label: scope
+        |       └─statements: 
+        |           ├─0: 
+        |           |   ├─label: action
+        |           |   ├─type: variable_creation
+        |           |   ├─name: pi
+        |           |   ├─value: 
+        |           |   |   ├─label: expression
+        |           |   |   ├─type: func_call
+        |           |   |   ├─func: 
+        |           |   |   |   ├─label: atom
+        |           |   |   |   ├─type: variable
+        |           |   |   |   └─value: partition
+        |           |   |   └─args: 
+        |           |   |       ├─0: 
+        |           |   |       |   ├─label: atom
+        |           |   |       |   ├─type: variable
+        |           |   |       |   └─value: arr
+        |           |   |       ├─1: 
+        |           |   |       |   ├─label: atom
+        |           |   |       |   ├─type: variable
+        |           |   |       |   └─value: low
+        |           |   |       └─2: 
+        |           |   |           ├─label: atom
+        |           |   |           ├─type: variable
+        |           |   |           └─value: high
+        |           |   └─kind: const
+        |           ├─1: 
+        |           |   ├─label: statement
+        |           |   └─content: 
+        |           |       ├─label: expression
+        |           |       ├─type: func_call
+        |           |       ├─func: 
+        |           |       |   ├─label: atom
+        |           |       |   ├─type: variable
+        |           |       |   └─value: quickSort
+        |           |       └─args: 
+        |           |           ├─0: 
+        |           |           |   ├─label: atom
+        |           |           |   ├─type: variable
+        |           |           |   └─value: arr
+        |           |           ├─1: 
+        |           |           |   ├─label: atom
+        |           |           |   ├─type: variable
+        |           |           |   └─value: low
+        |           |           └─2: 
+        |           |               ├─label: expression
+        |           |               ├─type: binary
+        |           |               ├─LHS: 
+        |           |               |   ├─label: atom
+        |           |               |   ├─type: variable
+        |           |               |   └─value: pi
+        |           |               ├─RHS: 
+        |           |               |   ├─label: atom
+        |           |               |   ├─type: number
+        |           |               |   └─value: 1
+        |           |               └─op: -
+        |           └─2: 
+        |               ├─label: statement
+        |               └─content: 
+        |                   ├─label: expression
+        |                   ├─type: func_call
+        |                   ├─func: 
+        |                   |   ├─label: atom
+        |                   |   ├─type: variable
+        |                   |   └─value: quickSort
+        |                   └─args: 
+        |                       ├─0: 
+        |                       |   ├─label: atom
+        |                       |   ├─type: variable
+        |                       |   └─value: arr
+        |                       ├─1: 
+        |                       |   ├─label: expression
+        |                       |   ├─type: binary
+        |                       |   ├─LHS: 
+        |                       |   |   ├─label: atom
+        |                       |   |   ├─type: variable
+        |                       |   |   └─value: pi
+        |                       |   ├─RHS: 
+        |                       |   |   ├─label: atom
+        |                       |   |   ├─type: number
+        |                       |   |   └─value: 1
+        |                       |   └─op: +
+        |                       └─2: 
+        |                           ├─label: atom
+        |                           ├─type: variable
+        |                           └─value: high
+        └─kind: const
